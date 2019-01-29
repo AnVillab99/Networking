@@ -263,9 +263,32 @@ Escriba un servidor que reciba un número y responda el cuadrado de este número
 
 Figura 3: clase servidor que regresa el mismo mensaje que lee
 
+![imagen del ejercicio4.3.1](images/ejercicio_4_3_1.png)
 ### 4.3.2[](#4-3-2)
 
 Escriba un servidor que pueda recibir un número y responda con un operación sobre este número. Este servidor puede recibir un mensaje que empiece por “fun:”, si recibe este mensaje cambia la operación a las especiﬁcada. El servidor debe responder las funciones seno, coseno y tangente. Por defecto debe empezar calculando el coseno. Por ejemplo, si el primer número que recibe es 0, debe responder 1, si después recibe ⇡/2 debe responder 0, si luego recibe “fun:sin” debe cambiar la operación actual a seno, es decir a a partir de ese momento debe calcular senos. Si enseguida recibe 0 debe responder 0.
+![imagen del ejercicio4.3.2](images/ejercicio_4_3_2.png)
+
+## 4.4. Servidor web[](#4-4-servidor-web)
+
+El código 4 presenta un servidor web que atiende una solicitud. Implemente el servidor e intente conectarse desde el browser.
+
+## 4.5 Ejercicios[](#4-5-ejercicios)
+
+### 4.5.1[](#4-5-1)
+
+Escriba un servidor web que soporte múltiples solicitudes seguidas (no concurrentes). El servidor debe retornar todos los archivos solicitados, incluyendo páginas html e imágenes.
+
+![imagen del ejercicio4.4 y 4.5](images/ejercicio_4_4_4_5.png)
+
+## 5.Datagramas[](#5-datagramas)
+
+Los programas escritos en las secciones anteriores presentan ejemplos de aplicaciones que se conectan punto a punto con otras aplicaciones. Estos ejemplos usaban por debajo el protocolo TCP. Esta secci´on muestra programas que se comunican sin importar si los mensajes enviados fueron o no recibidos, o en que orden llegan. Esto, se implementa usando el protocolo UDP. La abstracci´on fundamental para hacer este tipo de programas es el datagrama y el java.net.DatagramSocket.
+
+## 5.1. Datagramas[](#5-1-datagramas)
+
+Un datagrama es un mensaje independiente autocontenido que es enviado a través de la red, y cuya llegada, tiempo de llegada y contenido no son garantizados. Estos datagramas son útiles para implementar servicios cuyos mensajes no tienen un contenido del cual dependen procesos fundamentales. Por ejemplo usted quiere que la comunicación entre un avión y la torre de control sea inmediata y garantizada, sin embargo, si tiene una página que muestra el estado del tiempo en la playa, no le importa si el último mensaje es de hace 1 hora y de pronto no es tan exacto.
+
 
 
 
